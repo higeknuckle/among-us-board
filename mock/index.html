@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8" />
+  <!-- <link rel="icon" href="%PUBLIC_URL%/favicon.ico" /> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Among Us の盤面整理ツール" />
+  <!-- <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" /> -->
+  <!-- <link rel="manifest" href="%PUBLIC_URL%/manifest.json" /> -->
+  <title>Among Us Board</title>
+  <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+  <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root">
+    <header class="hero-head">
+      <nav class="navbar is-light" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <div class="navbar-item">Among Us Board</div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="section">
+      <div class="container">
+        <table class="table is-bordered is-fullwidth">
+          <thead>
+            <tr>
+              <th><span class="icon"><i class="fas fa-user"></i></span></th>
+              <th class="col-username"><span class="icon"><i class="fas fa-user-edit"></i></span></th>
+              <th class="col-eval-bar"><div class="is-flex is-justify-content-space-between"><span class="icon"><i class="far fa-smile-beam"></i></span><span class="icon"><i class="fas fa-question"></i></span><span class="icon"><i class="fas fa-angry"></i></span></div></th>
+              <th class="header-end"><span class="icon"><i class="fas fa-bullhorn"></i></span></th>
+              <th><span class="icon">1</span></th>
+              <th><span class="icon">2</span></th>
+              <th><span class="icon">3</span></th>
+              <th><span class="icon">4</span></th>
+              <th><span class="icon">5</span></th>
+              <th class="col-notes"><i class="fas fa-edit"></i></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><img src="../public/icon/red.png" height="40px" width="40px"></td>
+              <td class="col-username"><input class="input" type="text" maxlength="12" placeholder=""></td>
+              <td class="col-eval-bar"><input type="range" min="0" max="8"></td>
+              <td class="header-end"><button class="button is-ghost"></button></td>
+              <td>
+                <div class="dropdown is-hoverable">
+                  <div class="dropdown-trigger">
+                    <button class="button is-ghost p-1" aria-haspopup="true" aria-controls="dropdown-menu"></button>
+                  </div>
+                  <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                    <div class="dropdown-content">
+                      <a class="dropdown-item has-text-centered"><span class="icon">😄</span></a>
+                      <a class="dropdown-item has-text-centered">😡</a>
+                      <a class="dropdown-item has-text-centered">❎</a>
+                      <hr class="dropdown-divider">
+                      <a class="dropdown-item has-text-centered">📢</a>
+                      <a class="dropdown-item has-text-centered">👀‼️</a>
+                      <a class="dropdown-item has-text-centered">🛎</a>
+                      <a class="dropdown-item has-text-centered">👋</a>
+                      <hr class="dropdown-divider">
+                      <a class="dropdown-item has-text-centered">A</a>
+                      <a class="dropdown-item has-text-centered">B</a>
+                      <a class="dropdown-item has-text-centered">C</a>
+                      <a class="dropdown-item has-text-centered">D</a>
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td><button class="button is-ghost" aria-haspopup="true" aria-controls="dropdown-menu"><span class="icon">☠️</span></button></td>
+              <td><button class="button is-ghost" aria-haspopup="true" aria-controls="dropdown-menu"></button></td>
+              <td><button class="button is-ghost" aria-haspopup="true" aria-controls="dropdown-menu"></button></td>
+              <td><button class="button is-ghost" aria-haspopup="true" aria-controls="dropdown-menu"></button></td>
+              <td class="col-notes"><input class="input" type="text" placeholder=""></td>
+            </tr>
+            <tr>
+              <td><img src="../public/icon/blue.png" height="40px" width="40px"></td>
+              <td class="col-username"><input class="input" type="text" placeholder=""></td>
+              <td class="col-eval-bar"><input type="range" min="0" max="8"></td>
+              <td class="header-end"><button class="button is-ghost">✅</button></td>
+              <td><button class="button is-ghost" aria-haspopup="true" aria-controls="dropdown-menu">📢</button></td>
+              <td><button class="button is-ghost" aria-haspopup="true" aria-controls="dropdown-menu">👋</button></td>
+              <td><button class="button is-ghost" aria-haspopup="true" aria-controls="dropdown-menu"></button></td>
+              <td><button class="button is-ghost" aria-haspopup="true" aria-controls="dropdown-menu"></button></td>
+              <td><button class="button is-ghost" aria-haspopup="true" aria-controls="dropdown-menu"></button></td>
+              <td class="col-notes"><input class="input" type="text" placeholder=""></td>
+            </tr>
+            <tr class="has-background-grey-light">
+              <td><img src="../public/icon/green.png" height="40px" width="40px"></td>
+              <td class="col-username"><input class="input" type="text" placeholder=""></td>
+              <td class="col-eval-bar"><input type="range" min="0" max="8"></td>
+              <td class="header-end"><button class="button is-ghost"></button></td>
+              <td class="has-background-grey"><button class="button is-ghost" aria-haspopup="true" aria-controls="dropdown-menu">☠️</button></td>
+              <td><button class="button is-ghost" aria-haspopup="true" aria-controls="dropdown-menu"></button></td>
+              <td><button class="button is-ghost" aria-haspopup="true" aria-controls="dropdown-menu"></button></td>
+              <td><button class="button is-ghost" aria-haspopup="true" aria-controls="dropdown-menu"></button></td>
+              <td><button class="button is-ghost" aria-haspopup="true" aria-controls="dropdown-menu"></button></td>
+              <td class="col-notes"><input class="input" type="text" placeholder=""></td>
+            </tr>
+            <tr class="">
+              <td><img src="../public/icon/orange.png" height="40px" width="40px"></td>
+              <td class="col-username"><input class="input" type="text" placeholder=""></td>
+              <td class="col-eval-bar"><input type="range" min="0" max="8"></td>
+              <td class="header-end"><button class="button is-ghost"></button></td>
+              <td><button class="button is-ghost" aria-haspopup="true" aria-controls="dropdown-menu"></button></td>
+              <td><button class="button is-ghost" aria-haspopup="true" aria-controls="dropdown-menu"></button></td>
+              <td><button class="button is-ghost" aria-haspopup="true" aria-controls="dropdown-menu"></button></td>
+              <td><button class="button is-ghost" aria-haspopup="true" aria-controls="dropdown-menu"></button></td>
+              <td><button class="button is-ghost" aria-haspopup="true" aria-controls="dropdown-menu"></button></td>
+              <td class="col-notes"><input class="input" type="text" placeholder=""></td>
+            </tr>
+            <tr class="">
+              <td><img src="../public/icon/pink.png" height="40px" width="40px"></td>
+              <td class="col-username"><input class="input" type="text" placeholder=""></td>
+              <td class="col-eval-bar"><input type="range" min="0" max="8"></td>
+              <td class="header-end"><button class="button is-ghost"></button></td>
+              <td><button class="button is-ghost" aria-haspopup="true" aria-controls="dropdown-menu"></button></td>
+              <td><button class="button is-ghost" aria-haspopup="true" aria-controls="dropdown-menu"></button></td>
+              <td><button class="button is-ghost" aria-haspopup="true" aria-controls="dropdown-menu"></button></td>
+              <td><button class="button is-ghost" aria-haspopup="true" aria-controls="dropdown-menu"></button></td>
+              <td><button class="button is-ghost" aria-haspopup="true" aria-controls="dropdown-menu"></button></td>
+              <td class="col-notes"><input class="input" type="text" placeholder=""></td>
+            </tr>
+            <tr class="">
+              <td><img src="../public/icon/lime.png" height="40px" width="40px"></td>
+              <td class="col-username"><input class="input" type="text" placeholder=""></td>
+              <td class="col-eval-bar"><input type="range" min="0" max="8"></td>
+              <td class="header-end"><button class="button is-ghost"></button></td>
+              <td><button class="button is-ghost" aria-haspopup="true" aria-controls="dropdown-menu">⬜⬜</button></td>
+              <td><button class="button is-ghost" aria-haspopup="true" aria-controls="dropdown-menu">👀‼️</button></td>
+              <td><button class="button is-ghost" aria-haspopup="true" aria-controls="dropdown-menu">⬜⬜</button></td>
+              <td><button class="button is-ghost" aria-haspopup="true" aria-controls="dropdown-menu">⬜⬜</button></td>
+              <td><button class="button is-ghost" aria-haspopup="true" aria-controls="dropdown-menu">⬜⬜</button></td>
+              <td class="col-notes"><input class="input" type="text" placeholder=""></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+</body>
+
+<script>
+  twemoji.parse(document.body);
+</script>
+</html>
